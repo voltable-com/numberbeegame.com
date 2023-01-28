@@ -135,6 +135,9 @@ define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
     "url": "favicon-96.png",
     "revision": "fb4eca39de0feb1f9d9471fdc77dc0d9"
   }, {
+    "url": "favicon.ico",
+    "revision": "e97372a68b4a9cd19e5b235734f7c7f1"
+  }, {
     "url": "favicon.png",
     "revision": "60087111bf538172d51ced968434791b"
   }, {
@@ -148,7 +151,7 @@ define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
     "revision": "1b08fd675c565a74daa0053b8a744df3"
   }, {
     "url": "/",
-    "revision": "9a9a2714296bd2b5a4127fdd7b24ac10"
+    "revision": "100eb9e1d21c1bfd5692f45b6a0d0a01"
   }, {
     "url": "js/a.js",
     "revision": "b8eb5afe6c79d1f23d45e862d925064b"
