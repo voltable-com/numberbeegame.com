@@ -151,7 +151,7 @@ define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
     "revision": "1b08fd675c565a74daa0053b8a744df3"
   }, {
     "url": "/",
-    "revision": "5d2b81f87722c582a9b6ae936bdc5dff"
+    "revision": "2c455dde446cc6c1b6ff8db3761b37e2"
   }, {
     "url": "js/a.js",
     "revision": "b8eb5afe6c79d1f23d45e862d925064b"
