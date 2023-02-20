@@ -81,7 +81,7 @@ define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "assets/index.308f6ada.css",
+    "url": "assets/index.4819498e.css",
     "revision": null
   }, {
     "url": "favicon-114.png",
@@ -151,7 +151,7 @@ define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
     "revision": "1b08fd675c565a74daa0053b8a744df3"
   }, {
     "url": "/",
-    "revision": "90d4ae8a30561e4c37ece8cb03e2edda"
+    "revision": "d3200d2e5d4b831bf3b7bfcc0cec7298"
   }, {
     "url": "js/a.js",
     "revision": "b8eb5afe6c79d1f23d45e862d925064b"
