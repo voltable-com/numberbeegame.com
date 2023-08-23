@@ -147,6 +147,9 @@ define(['./workbox-3632007c'], (function (workbox) { 'use strict';
     "url": "humans.txt",
     "revision": "c0c62f629982b1e05bb101814f89df13"
   }, {
+    "url": "img/numberbeegame.png",
+    "revision": "0b5b422335a62b966f0ad9f371924f2a"
+  }, {
     "url": "/",
     "revision": "b9c381037e7a11b79a78f58332ee4b09"
   }, {
