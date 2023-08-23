@@ -1,1 +1,224 @@
-const range=(t,e)=>e>t?[t,...range(t+1,e)]:[t];function rnd(t,e){return Math.floor(Math.random()*(e-t+1)+t)}const toggletheme=()=>({init:function(){const t=localStorage.getItem("theme")?localStorage.getItem("theme"):null;t&&(document.documentElement.className=t,"theme-dark"===t&&(this.$refs.toggleTheme.checked=!0))},switchTheme:function(t){t.target.checked?(document.documentElement.className="theme-dark",localStorage.setItem("theme","theme-dark")):(document.documentElement.className="theme-light",localStorage.setItem("theme","theme-light"))}}),mable=()=>({n1:"",n2:"",f:"",x1:[],x2:[],cells:[],c:0,solution:"",ended:!1,wrong:!1,init:function(){this.ended=!1,this.wrong=!1,this.c=0,document.addEventListener("alpine:initialized",(()=>{let t=rnd(1,12400);fetch("/api/"+t+".json").then((t=>t.json())).then((t=>{this.setData(t),this.draw(this.x1,1),this.draw(this.x2,11)}))}))},setData:function(t){let e=JSON.parse(atob(t.data));this.n1=atob(e.n1),this.n2=atob(e.n2),this.f=atob(e.f).split(""),this.x1=Array.from(this.getx1(this.n1,this.n2)),this.x2=Array.from(this.getx1(this.n2,this.n1)),this.cells=Array.from(document.querySelectorAll("#b div"))},checkState:function(){if(0===this.cells.reduce(((t,e)=>"x"===e.innerText?t+1:t),0)){let t=this.multiplicationFounded();this.solution=this.x1[0][0]+" &times; "+this.x1[1][0],this.ended=t,this.wrong=!t}},getp:function(t){return t.reduce(((t,e)=>t+("0"==String(e[0])?"":String(e[0]))),"")},multiplicationFounded:function(){let t=this.cells.reduce(((t,e)=>t+e.innerText),0);return"0"+this.getp(this.x1)+this.getp(this.x2)==t},createInput:function(t){let e=t,n=document.createElement("input");return n.type="number",n.inputMode="numeric",n.pattern="[0-9]*",n.maxLength=1,n.size=1,n.className="input no-spin","x"!==t&&(n.value=t),n.addEventListener("keydown",(t=>{isFinite(t.key)?t.target.parentNode.innerText=t.key:"Delete"===t.key||"Backspace"===t.key||"Process"===t.key?t.target.parentNode.innerText="x":t.target.parentNode.innerText=e,t.target.remove(),this.checkState()})),n.addEventListener("blur",(t=>{t.target.parentNode.innerText=e,t.target.remove()})),n},aclick:function(t){if(t.target.dataset.c&&t.target.dataset.c>=0)if(t.ctrlKey)t.target.innerText=this.f[t.target.dataset.c],this.checkState();else if(!t.target.classList.contains("w")){let e=t.target.innerText;t.target.innerText="";let n=this.createInput(e);t.target.append(n),n.focus()}},getx1:function*(t,e){yield[t,0],yield[e,0];for(let n=e.length,i=n-1;i>=0;i--)yield[String(e[i]*t),n-i-1];yield[String(t*e),0]},draw:function(t,e){t=Array.from(t);let n=0;for(let i=0;i<t.length;i++){let s=t[i][0],r=t[i][1];"0"!==s?(this.drawNumber(s,r,e,n),n+=1):this.c=this.c+1}this.drawLine(n,e)},drawNumber:function(t,e,n,i){for(let s=0,r=t.length;s<r;s++){let t=9*(i+n)+i+n%10+(10-r)-e+s,a=this.f[this.c];this.cells[t].innerText=a,this.cells[t].dataset.c=this.c,"x"!=a&&this.cells[t].classList.add("w"),this.c=this.c+1}},drawLine:function(t,e){for(let n=0;n<10;n++){let i=9*(t-2+e)+t+7+e%10-n;this.cells[i].classList.add("bb")}}});
+const toggletheme = () => ({
+    init: function() {
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+  
+        if (currentTheme) {
+            document.documentElement.className = currentTheme;
+  
+            if (currentTheme === 'theme-dark') {
+                this.$refs.toggleTheme.checked = true;
+            }
+        }
+    },
+    switchTheme: function(e) {
+        if (e.target.checked) {
+        document.documentElement.className = 'theme-dark';
+        localStorage.setItem('theme', 'theme-dark');
+        }
+        else {
+        document.documentElement.className = 'theme-light';
+        localStorage.setItem('theme', 'theme-light');
+        }      
+    }
+});
+
+const numberbee = () => ({
+    count: 0,
+    guesses:[],
+    numbertoguess: '00000',
+    ended: false,
+    wrong: false,
+    n: '?????',
+    l:'standard',
+    m: 15,
+    msg: false,
+    t:true,
+    init: function() {
+      this.count = 0;
+      this.ended = false,
+      this.wrong = false,
+      this.guesses = [
+        {v: '     ',p:'',m:''}
+      ];
+      if(this.t) {
+        this.$refs.binary.checked = false;
+        this.$refs.easy.checked = false;
+      }
+      this.n = '?????';
+      this.getng();
+  
+    },
+    getng: function() {
+      let n = '';
+      switch(this.l) 
+      {
+        case 'easy':
+          n = this.getn();
+          break;
+        case 'binary':
+          n = this.getb();
+          break;
+        default:
+          n = this.gets(); 
+      }
+  
+      this.numbertoguess = this.F(n);
+    },
+    gets: function() {
+      return String(Math.floor(Math.random()*99999)).padStart(5,'0');
+    },
+    getb: function() {
+      let n = '';
+      for(let i = 0;i<5;i++) {
+          let r = Math.floor(Math.random()*2);
+          n += r;
+      }
+      return n;
+    },
+    getn: function() {
+        let a = '0123456789';
+        let n = '';
+        for(let i = 0;i<5;i++) {
+            let r = a[Math.floor(Math.random()*a.length)];
+            n += r;
+            a = a.replace(r,'');
+        }
+        return n;
+    },
+    input: function(e) {
+      if(this.l == 'binary') {
+        e.target.value = e.target.value
+          .replace(/[^0-1]/g, '')
+          .replace(/(\d{5})\d/g, '$1');
+      } else {
+        e.target.value = e.target.value
+        .replace(/[^0-9]/g, '')
+        .replace(/(\d{5})\d/g, '$1');
+      }
+    },
+    level: function(e) {
+      if(!confirm("Current progress will be lost! Reset the game?")) {
+        e.target.checked = !e.target.checked;
+        return;
+      }
+  
+      this.t = false;
+      let l = 'standard';
+      let m = 15;
+      if(e.target.checked) {
+        if(e.target.value == 'easy') {
+          this.$refs.binary.checked = false;
+          l = 'easy';
+        }
+        if(e.target.value == 'binary') {
+          this.$refs.easy.checked = false;
+          l = 'binary';
+          m = 5;
+        }
+      }
+      if(this.l != l) {
+        this.l = l;
+        this.m = m;
+        this.init();
+      }
+    },
+    exists: function(value) {
+      let r = false;
+      this.guesses.forEach(x=> {
+          if(x.v == value) {
+            r = true;
+          }
+      });
+      return r;
+    },
+    keypress: function(e) {
+      if(this.ended || this.wrong) {
+        e.target.value = '';
+      }
+      let value = e.target.value;
+      if(value.length != 5) {
+        return;
+      }
+  
+      let ng = this.f();
+      if(!this.exists(value)) {
+        this.count = this.count + 1;
+        let m = null;
+        if(value == ng && !this.ended) {
+          this.ended = true;
+          this.n = value;
+          m = {
+            v: value,
+            p:'5p',
+            m:'-'
+          }
+        } else if(this.count >= this.m) {
+          this.wrong = true;
+          this.n = ng;
+          m = {
+            v: ng,
+            p:'-',
+            m:'-'
+          };
+        }
+  
+        if(!this.ended || !this.wrong) {
+          let pm = this.guesspattern(value);
+          m = {
+            v: value,
+            p:pm[0],
+            m:pm[1]
+          };
+        }
+        if(m) {
+          this.guesses.splice(0,0,m);
+        }
+      } else {
+        this.msg = true;
+        setTimeout(() => this.msg = false, 1500);
+      }
+      e.target.value = '';
+    },
+    guesspattern: function(v) {
+      let p = 0, m = 0;
+      let g = Array.from(this.f());
+      v = Array.from(v);
+      for(let i=0, len = v.length; i< len;i++) {
+        if(v[i] == g[i]) {
+          p = p + 1;
+          g[i] = 'x';
+          v[i] = 'y';
+        }
+      }
+  
+      for(let i=0, len = v.length; i< len;i++) {
+        let ii = g.indexOf(v[i]);
+        if(ii>-1) {
+          m = m + 1;
+          g[ii] = 'x';
+        }
+      }
+  
+      p = p+'p';
+      m = m+'m';
+      if(p == '0p') p = '-';
+      if(m == '0m') m = '-';
+      return [p,m];
+    },
+    F: function(n) {
+      n = '1' + n;
+      n = BigInt(parseInt(n));
+      let cryptbase1 = BigInt(12345678909876)
+      let cryptbase2 = BigInt(234567890987654);
+   
+      return (n + cryptbase1) ^ cryptbase2;
+    },
+    f: function() {
+      let cryptbase1 = BigInt(12345678909876)
+      let cryptbase2 = BigInt(234567890987654);
+  
+      let d =(this.numbertoguess ^ cryptbase2) - cryptbase1;
+      return d.toString().slice(1); 
+    }
+  
+});

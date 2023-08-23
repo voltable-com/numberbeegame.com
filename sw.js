@@ -67,7 +67,7 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
+define(['./workbox-3632007c'], (function (workbox) { 'use strict';
 
   self.addEventListener('message', event => {
     if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -81,101 +81,101 @@ define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "assets/index.06c115a7.css",
+    "url": "assets/index.fca46991.css",
     "revision": null
   }, {
     "url": "favicon-114.png",
-    "revision": "66e458704aeaf30480e7e4136c0af13a"
+    "revision": "bc3357d463ea3caada39e3ab93f124a7"
   }, {
     "url": "favicon-120.png",
-    "revision": "b9e987dd66aea6c2dd25f32377b896ab"
+    "revision": "28e1290ca6d763a2ca326fc347219985"
   }, {
     "url": "favicon-144.png",
-    "revision": "e3cd353f26e7f2d3ee48e15309f28968"
+    "revision": "88832d870415c920fff86721d7f12ce2"
   }, {
     "url": "favicon-152.png",
-    "revision": "8269d861d69b7b8f35eb5f3e4f6d4d16"
+    "revision": "c03d39fc7f5ba017146c3058ce9326b2"
   }, {
     "url": "favicon-16.png",
-    "revision": "a6bd1c693e69762ac99c913ccc1a6dc4"
+    "revision": "36887cd22730fe299cd31d4f0777bebe"
   }, {
     "url": "favicon-180.png",
-    "revision": "2562d9849594cf145d7732efccc12fcd"
+    "revision": "bb543d4e185ff07d7da7e79fbb6cca89"
   }, {
     "url": "favicon-192.png",
-    "revision": "041441f28d10996adb874fde84f28774"
+    "revision": "0ff8a157563dd1b40ed8949659d22336"
   }, {
     "url": "favicon-250.png",
-    "revision": "ca1a5c39c98d4ad44f000c8426a1f65a"
+    "revision": "9bbe20176de33df8fa902d44e4649bb9"
   }, {
     "url": "favicon-32.png",
-    "revision": "7f1f1f150ae7f7448d82491f93982ed6"
+    "revision": "a9f289cd9a937436cdf6f4f321de028a"
   }, {
     "url": "favicon-325.png",
-    "revision": "5bc587381d7308b671ade7f402c064e0"
+    "revision": "bf9b6df6b645743ba98e5c68a11d9fb3"
   }, {
     "url": "favicon-48.png",
-    "revision": "a2f5f0e722615007d3ed13f27975ce0f"
+    "revision": "44d9949debdd9d7cb8aab462331e2a9a"
   }, {
     "url": "favicon-512.png",
-    "revision": "1555e59c004dc8bdaae5df18c46de2aa"
+    "revision": "ddfa1af0e3619e013d35033a4c42104f"
   }, {
     "url": "favicon-57.png",
-    "revision": "68ecb963f666473c25b5b61e5188ab28"
+    "revision": "4452976c752b56a571f0aa58861128a3"
   }, {
     "url": "favicon-60.png",
-    "revision": "01b5093875bb96a7378ee5ed2a156e3d"
+    "revision": "79d7a314f32b74d74221096e7d6b8137"
   }, {
     "url": "favicon-72.png",
-    "revision": "45f054fcb39fd34fb056fea6ca73e87e"
+    "revision": "7f185eef6d165173886f4cfe4e8216d7"
   }, {
     "url": "favicon-76.png",
-    "revision": "552730b5114559e168073fb2592099f7"
+    "revision": "c8d4a0898094b3ec86027cf3e5e5bf11"
   }, {
     "url": "favicon-96.png",
-    "revision": "db46c48ed08966dc9cb64af6081872e3"
+    "revision": "aa25b9068594a654c9fa72f0aa67bcaf"
   }, {
     "url": "favicon.ico",
-    "revision": "53d3a9ca2fe71cfac3b8d9eff7a4eec1"
+    "revision": "e97372a68b4a9cd19e5b235734f7c7f1"
   }, {
     "url": "favicon.png",
-    "revision": "53d3a9ca2fe71cfac3b8d9eff7a4eec1"
+    "revision": "60087111bf538172d51ced968434791b"
   }, {
     "url": "favicon.svg",
-    "revision": "f392edad8c4e4ae445f53a40cb69e375"
+    "revision": "582b185ad3098aaf9196648dcea8fd84"
   }, {
     "url": "humans.txt",
     "revision": "c0c62f629982b1e05bb101814f89df13"
   }, {
-    "url": "img/mable.png",
-    "revision": "66e458704aeaf30480e7e4136c0af13a"
+    "url": "img/numberbeegame.png",
+    "revision": "0b5b422335a62b966f0ad9f371924f2a"
   }, {
     "url": "/",
-    "revision": "6217a8c52ab3d868a388988440dbe768"
+    "revision": "ea48635ba21a99140b8dfc34c9a2f1eb"
   }, {
     "url": "js/a.js",
-    "revision": "b8eb5afe6c79d1f23d45e862d925064b"
+    "revision": "abb64a8baaae5976882416ce3c4563be"
   }, {
     "url": "js/m.js",
-    "revision": "15b17ee4ffbb5c80982cb123466f5afc"
+    "revision": "46674febf7c49f8965d54f32a45fb693"
   }, {
     "url": "registerSW.js",
-    "revision": "6a0a0c8ba795b804f5fac2886a79f79c"
+    "revision": "1872c500de691dce40960bb85481de07"
   }, {
     "url": "robots.txt",
     "revision": "5e0bd1c281a62a380d7a948085bfe2d1"
   }, {
     "url": "favicon.svg",
-    "revision": "7536b0eda62e2c06d45a31f1f1ee55c2"
+    "revision": "582b185ad3098aaf9196648dcea8fd84"
   }, {
     "url": "favicon-192.png",
-    "revision": "069749175e678b2ae64a367ec3621668"
+    "revision": "0ff8a157563dd1b40ed8949659d22336"
   }, {
     "url": "favicon-512.png",
-    "revision": "c1869605bdd6c4279bbfac7b51a0d79d"
+    "revision": "ddfa1af0e3619e013d35033a4c42104f"
   }, {
     "url": "manifest.webmanifest",
-    "revision": "990637790174d344a964c5d74b32ff89"
+    "revision": "d0902d049c469cf8ea2c0e5b6e4d0542"
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("/")));
