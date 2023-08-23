@@ -81,83 +81,83 @@ define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "assets/index.4819498e.css",
+    "url": "assets/index.06c115a7.css",
     "revision": null
   }, {
     "url": "favicon-114.png",
-    "revision": "710eb9a472b55cffe53fb609f883404d"
+    "revision": "66e458704aeaf30480e7e4136c0af13a"
   }, {
     "url": "favicon-120.png",
-    "revision": "6b46c386aa7cbc64b41c9d66d095d6e4"
+    "revision": "b9e987dd66aea6c2dd25f32377b896ab"
   }, {
     "url": "favicon-144.png",
-    "revision": "558e1b35b6d15ecaba5a5325ad13c932"
+    "revision": "e3cd353f26e7f2d3ee48e15309f28968"
   }, {
     "url": "favicon-152.png",
-    "revision": "653defb8d9c22dfeabf8079c8ba0f704"
+    "revision": "8269d861d69b7b8f35eb5f3e4f6d4d16"
   }, {
     "url": "favicon-16.png",
-    "revision": "36887cd22730fe299cd31d4f0777bebe"
+    "revision": "a6bd1c693e69762ac99c913ccc1a6dc4"
   }, {
     "url": "favicon-180.png",
-    "revision": "192320645ebb38f26094b5dfce8812af"
+    "revision": "2562d9849594cf145d7732efccc12fcd"
   }, {
     "url": "favicon-192.png",
-    "revision": "0fd9d030cfce6b98e4b5aad7fff3c8bf"
+    "revision": "041441f28d10996adb874fde84f28774"
   }, {
     "url": "favicon-250.png",
-    "revision": "05af6e46b1e8822c7f135e5c09b97f69"
+    "revision": "ca1a5c39c98d4ad44f000c8426a1f65a"
   }, {
     "url": "favicon-32.png",
-    "revision": "a9f289cd9a937436cdf6f4f321de028a"
+    "revision": "7f1f1f150ae7f7448d82491f93982ed6"
   }, {
     "url": "favicon-325.png",
-    "revision": "4eaa2e72d0b345cca9cdda4af02c6bf6"
+    "revision": "5bc587381d7308b671ade7f402c064e0"
   }, {
     "url": "favicon-48.png",
-    "revision": "44d9949debdd9d7cb8aab462331e2a9a"
+    "revision": "a2f5f0e722615007d3ed13f27975ce0f"
   }, {
     "url": "favicon-512.png",
-    "revision": "f1bf3171821bbaa50da338421b9c73e6"
+    "revision": "1555e59c004dc8bdaae5df18c46de2aa"
   }, {
     "url": "favicon-57.png",
-    "revision": "4452976c752b56a571f0aa58861128a3"
+    "revision": "68ecb963f666473c25b5b61e5188ab28"
   }, {
     "url": "favicon-60.png",
-    "revision": "79d7a314f32b74d74221096e7d6b8137"
+    "revision": "01b5093875bb96a7378ee5ed2a156e3d"
   }, {
     "url": "favicon-72.png",
-    "revision": "7f185eef6d165173886f4cfe4e8216d7"
+    "revision": "45f054fcb39fd34fb056fea6ca73e87e"
   }, {
     "url": "favicon-76.png",
-    "revision": "c8d4a0898094b3ec86027cf3e5e5bf11"
+    "revision": "552730b5114559e168073fb2592099f7"
   }, {
     "url": "favicon-96.png",
-    "revision": "fb4eca39de0feb1f9d9471fdc77dc0d9"
+    "revision": "db46c48ed08966dc9cb64af6081872e3"
   }, {
     "url": "favicon.ico",
-    "revision": "e97372a68b4a9cd19e5b235734f7c7f1"
+    "revision": "53d3a9ca2fe71cfac3b8d9eff7a4eec1"
   }, {
     "url": "favicon.png",
-    "revision": "60087111bf538172d51ced968434791b"
+    "revision": "53d3a9ca2fe71cfac3b8d9eff7a4eec1"
   }, {
     "url": "favicon.svg",
-    "revision": "83d0c54b2679022773a1ae4acfa08952"
+    "revision": "f392edad8c4e4ae445f53a40cb69e375"
   }, {
     "url": "humans.txt",
     "revision": "c0c62f629982b1e05bb101814f89df13"
   }, {
-    "url": "img/numberbeegame.png",
-    "revision": "1b08fd675c565a74daa0053b8a744df3"
+    "url": "img/mable.png",
+    "revision": "66e458704aeaf30480e7e4136c0af13a"
   }, {
     "url": "/",
-    "revision": "d3200d2e5d4b831bf3b7bfcc0cec7298"
+    "revision": "6217a8c52ab3d868a388988440dbe768"
   }, {
     "url": "js/a.js",
     "revision": "b8eb5afe6c79d1f23d45e862d925064b"
   }, {
     "url": "js/m.js",
-    "revision": "efc2e6a0bca9e982dc3fee54bccd4f1f"
+    "revision": "15b17ee4ffbb5c80982cb123466f5afc"
   }, {
     "url": "registerSW.js",
     "revision": "6a0a0c8ba795b804f5fac2886a79f79c"
@@ -166,16 +166,16 @@ define(['./workbox-d2a14864'], (function (workbox) { 'use strict';
     "revision": "5e0bd1c281a62a380d7a948085bfe2d1"
   }, {
     "url": "favicon.svg",
-    "revision": "582b185ad3098aaf9196648dcea8fd84"
+    "revision": "7536b0eda62e2c06d45a31f1f1ee55c2"
   }, {
     "url": "favicon-192.png",
-    "revision": "0ff8a157563dd1b40ed8949659d22336"
+    "revision": "069749175e678b2ae64a367ec3621668"
   }, {
     "url": "favicon-512.png",
-    "revision": "ddfa1af0e3619e013d35033a4c42104f"
+    "revision": "c1869605bdd6c4279bbfac7b51a0d79d"
   }, {
     "url": "manifest.webmanifest",
-    "revision": "d0902d049c469cf8ea2c0e5b6e4d0542"
+    "revision": "990637790174d344a964c5d74b32ff89"
   }], {});
   workbox.cleanupOutdatedCaches();
   workbox.registerRoute(new workbox.NavigationRoute(workbox.createHandlerBoundToURL("/")));
