@@ -67,7 +67,7 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-3632007c'], (function (workbox) { 'use strict';
+define(['./workbox-fc5f5acf'], (function (workbox) { 'use strict';
 
   self.addEventListener('message', event => {
     if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -81,9 +81,6 @@ define(['./workbox-3632007c'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "assets/index.fca46991.css",
-    "revision": null
-  }, {
     "url": "favicon-114.png",
     "revision": "bc3357d463ea3caada39e3ab93f124a7"
   }, {
@@ -151,7 +148,7 @@ define(['./workbox-3632007c'], (function (workbox) { 'use strict';
     "revision": "0b5b422335a62b966f0ad9f371924f2a"
   }, {
     "url": "/",
-    "revision": "b9c381037e7a11b79a78f58332ee4b09"
+    "revision": "d01de43e67c790786733530b62536089"
   }, {
     "url": "js/a.js",
     "revision": "abb64a8baaae5976882416ce3c4563be"
